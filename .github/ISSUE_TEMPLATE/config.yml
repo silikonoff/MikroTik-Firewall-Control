@@ -1,5 +1,11 @@
 blank_issues_enabled: true
 contact_links:
+  - name: Вопросы и диагностика
+    url: https://github.com/silikonoff/MikroTik-Firewall-Control/blob/main/docs/FAQ.md
+    about: Сначала проверьте частые причины ошибок
+  - name: Обсуждение проекта
+    url: https://github.com/silikonoff/MikroTik-Firewall-Control/discussions
+    about: Вопросы и опыт использования без секретных данных
   - name: Уязвимость безопасности
     url: https://github.com/silikonoff/MikroTik-Firewall-Control/security/advisories/new
-    about: Сообщить об уязвимости приватно, без публикации учётных данных
+    about: Сообщить об уязвимости приватно

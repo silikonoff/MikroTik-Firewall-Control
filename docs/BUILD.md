@@ -1,5 +1,7 @@
 # Сборка
 
+[← README](../README.md) · [Участие в разработке](../CONTRIBUTING.md)
+
 Нужны JDK 17+ (проверен JDK 21), Android SDK с `platforms;android-35` и `build-tools;34.0.0`. Gradle 8.9 загружает build-скрипт с проверкой SHA256. При первом запуске нужен интернет для зависимостей.
 
 ## Windows / PowerShell

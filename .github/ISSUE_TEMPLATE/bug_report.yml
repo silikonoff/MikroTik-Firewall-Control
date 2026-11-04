@@ -1,23 +1,57 @@
 name: Ошибка
-description: Сообщить о проблеме без секретных данных
+description: Помочь воспроизвести и исправить проблему
 labels: [bug]
 body:
-  - type: textarea
-    id: environment
+  - type: markdown
     attributes:
-      label: Окружение
-      description: Версии MFC, Android, RouterOS; модель телефона; REST/API; Wi-Fi/VPN/Ethernet. Без адресов и паролей.
+      value: Перед отправкой проверьте docs/FAQ.md. Не прикладывайте пароли, конфиги, приватные сертификаты и данные вашей сети. Об уязвимостях сообщайте через Security → Report a vulnerability.
+  - type: input
+    id: versions
+    attributes:
+      label: Версии и устройство
+      description: MFC, Android, RouterOS и модель телефона; модель USB-адаптера, если он используется.
+      placeholder: MFC 0.2.11, Android …, RouterOS 7.…, телефон …
+    validations:
+      required: true
+  - type: dropdown
+    id: protocol
+    attributes:
+      label: Протокол
+      options:
+        - REST / HTTPS
+        - REST / HTTP
+        - API
+        - API-SSL
+        - Не относится к подключению
+    validations:
+      required: true
+  - type: dropdown
+    id: route
+    attributes:
+      label: Маршрут
+      options:
+        - Wi-Fi напрямую
+        - Системная сеть / VPN
+        - Ethernet
+        - Не относится к подключению
     validations:
       required: true
   - type: textarea
     id: reproduce
     attributes:
-      label: Шаги и результат
-      description: Как воспроизвести, что ожидалось, что произошло. Состояние правил проверьте отдельно на роутере.
+      label: Шаги воспроизведения
+      placeholder: "1. Открыть …\n2. Нажать …\n3. Получить …"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемый и фактический результат
+      description: Если менялись правила, отдельно укажите, что показывает сам роутер; не прикладывайте полный конфиг.
     validations:
       required: true
   - type: textarea
     id: evidence
     attributes:
-      label: Ошибка или снимок
-      description: Удалите имена объектов, логины, IP, пароли и прочие личные данные.
+      label: Текст ошибки или снимок
+      description: Скройте имена объектов, логины, адреса, пароли и прочие личные данные.
