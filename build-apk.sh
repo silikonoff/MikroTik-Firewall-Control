@@ -28,5 +28,5 @@ if [[ ! -x "$GRADLE" ]]; then
 fi
 "$GRADLE" :app:testDebugUnitTest :app:lintDebug :app:assembleDebug --no-daemon --console=plain
 mkdir -p dist
-cp app/build/outputs/apk/debug/app-debug.apk dist/MikroTikFirewallControl-v0.2.10-debug.apk
-echo "APK: $PWD/dist/MikroTikFirewallControl-v0.2.10-debug.apk"
+cp app/build/outputs/apk/debug/app-debug.apk dist/MikroTikFirewallControl-v0.2.11-debug.apk
+echo "APK: $PWD/dist/MikroTikFirewallControl-v0.2.11-debug.apk"

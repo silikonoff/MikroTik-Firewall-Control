@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" role="img" aria-labelledby="title desc">
-<title id="title">MikroTik Firewall Control — MST</title><desc id="desc">Android control for RouterOS 7. Operator starts the stop rules; administrator restores traffic.</desc>
+<title id="title">MikroTik Firewall Control — MFC</title><desc id="desc">Android control for RouterOS 7. Operator starts the stop rules; administrator restores traffic.</desc>
 <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0B1220"/><stop offset="1" stop-color="#172D48"/></linearGradient><linearGradient id="blue" x2="1" y2="1"><stop stop-color="#4EA8FF"/><stop offset="1" stop-color="#3976DF"/></linearGradient></defs>
 <rect width="1600" height="500" rx="28" fill="url(#bg)"/>
 <g fill="none" stroke="#4EA8FF" opacity=".13" stroke-width="2"><path d="M940 90H1490V410H960M1040 40V460M1220 40V460M1400 40V460M930 170H1540M930 330H1540"/><circle cx="1220" cy="250" r="190"/><circle cx="1220" cy="250" r="140"/></g>
-<rect x="68" y="60" width="78" height="36" rx="18" fill="#4EA8FF"/><text x="107" y="84" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-weight="700" font-size="19" fill="#0B1220">MST</text>
+<rect x="68" y="60" width="78" height="36" rx="18" fill="#4EA8FF"/><text x="107" y="84" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-weight="700" font-size="19" fill="#0B1220">MFC</text>
 <text x="166" y="84" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#B8C9DC" letter-spacing="2">ANDROID · ROUTEROS 7</text>
 <g fill="#FFFFFF" font-family="Segoe UI,Arial,sans-serif" font-weight="700" font-size="66"><text x="68" y="188">MikroTik</text><text x="68" y="269">Firewall Control</text></g>
 <text x="72" y="324" font-family="Segoe UI,Arial,sans-serif" font-size="27" fill="#B8C9DC">Контроль трафика. Один понятный экран.</text>
@@ -12,5 +12,5 @@
 <path d="M1220 99L1345 150V253C1345 326 1296 371 1220 400C1144 371 1095 326 1095 253V150Z" fill="#0B1220" stroke="#4EA8FF" stroke-width="3"/>
 <path d="M1220 123L1322 165V253C1322 312 1281 352 1220 376C1159 352 1118 312 1118 253V165Z" fill="url(#blue)"/>
 <rect x="1160" y="223" width="120" height="42" rx="9" fill="#FFFFFF"/>
-<text x="1507" y="464" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#95ADC8">MikroTik Stop Traffic · Open source</text>
+<text x="1507" y="464" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#95ADC8">MikroTik Firewall Control · Open source</text>
 </svg>

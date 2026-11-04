@@ -7,7 +7,7 @@
         android:allowBackup="false"
         android:fullBackupContent="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
-        android:label="MST"
+        android:label="MFC"
         android:icon="@drawable/ic_firewall"
         android:theme="@style/AppTheme"
         android:networkSecurityConfig="@xml/network_security_config"

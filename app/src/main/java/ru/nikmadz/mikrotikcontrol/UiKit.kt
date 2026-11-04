@@ -70,7 +70,7 @@ internal object UiKit {
         gravity = Gravity.CENTER_VERTICAL
         val logo = ImageView(this@brandHeader).apply {
             setImageResource(R.drawable.ic_firewall)
-            contentDescription = "MikroTik Stop Traffic"
+            contentDescription = "MikroTik Firewall Control"
             scaleType = ImageView.ScaleType.FIT_CENTER
             importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
         }
@@ -78,7 +78,7 @@ internal object UiKit {
         val copy = vertical().apply {
             setPadding(dp(14), 0, 0, 0)
             addView(label("MIKROTIK", 22f, BLUE, true))
-            columnWithMargin(this, label("MST · Stop Traffic", 13f, MUTED), 4)
+            columnWithMargin(this, label("MFC · Firewall Control", 13f, MUTED), 4)
             columnWithMargin(this, label(subtitle, 13f, MUTED), 4)
         }
         addView(copy, LinearLayout.LayoutParams(0, -2, 1f))

@@ -76,7 +76,7 @@ class ConnectionsActivity : AdminActivity() {
             }
             columnWithMargin(root, tool, 10)
         }
-        columnWithMargin(root, label("MST · v0.2.10\nRouterOS 7 · MikroTik Stop Traffic", 12f, MUTED), 24)
+        columnWithMargin(root, label("MFC · v0.2.11\nRouterOS 7 · MikroTik Firewall Control", 12f, MUTED), 24)
     }
 
     private fun showError() {

@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/assets/banner.svg" alt="MikroTik Firewall Control — MST" width="100%"></p>
+<p align="center"><img src="docs/assets/banner.svg" alt="MikroTik Firewall Control — MFC" width="100%"></p>
 
 <p align="center">
   <a href="https://github.com/silikonoff/MikroTik-Firewall-Control/actions/workflows/build-apk.yml"><img src="https://github.com/silikonoff/MikroTik-Firewall-Control/actions/workflows/build-apk.yml/badge.svg" alt="Build"></a>
@@ -9,10 +9,10 @@
 </p>
 
 <h1 align="center">MikroTik Firewall Control</h1>
-<p align="center"><strong>Администратор настраивает. Оператор нажимает одну кнопку.</strong><br>В Android приложение называется <b>MST</b> — MikroTik Stop Traffic.</p>
+<p align="center"><strong>Администратор настраивает. Оператор нажимает одну кнопку.</strong><br>В Android приложение называется <b>MFC</b> — MikroTik Firewall Control.</p>
 <p align="center"><a href="https://github.com/silikonoff/MikroTik-Firewall-Control/releases">Скачать APK</a> · <a href="docs/SETUP.md">Настроить MikroTik</a> · <a href="docs/BUILD.md">Собрать из исходников</a> · <a href="https://github.com/silikonoff/MikroTik-Firewall-Control/issues/new/choose">Сообщить о проблеме</a></p>
 
-MST — небольшое нативное Android-приложение для управления подготовленными группами firewall-правил MikroTik. Оно помогает дать оператору понятную кнопку остановки трафика, сохранив настройки подключения и восстановление трафика за PIN-кодом администратора.
+MFC — небольшое нативное Android-приложение для управления подготовленными группами firewall-правил MikroTik. Оно помогает дать оператору понятную кнопку остановки трафика, сохранив настройки подключения и восстановление трафика за PIN-кодом администратора.
 
 **English:** Native Android controller for RouterOS 7 firewall groups. Operators enable predefined stop rules; only a PIN-authenticated administrator can disable them. Supports REST and native MikroTik API over Wi-Fi, VPN and USB Ethernet.
 
@@ -32,7 +32,7 @@ APP_STOP_VPN | Остановка VPN-трафика
 APP_STOP_GUEST | Гостевая сеть
 ```
 
-Каждый комментарий с одинаковым именем после `APP_STOP_` входит в одну группу. Включение меняет только `disabled=false`, выключение — `disabled=true`. MST сначала перечитывает состав, затем выполняет изменения и проверяет результат на оборудовании. Работает с IPv4 **Filter, NAT, Mangle, Raw**.
+Каждый комментарий с одинаковым именем после `APP_STOP_` входит в одну группу. Включение меняет только `disabled=false`, выключение — `disabled=true`. MFC сначала перечитывает состав, затем выполняет изменения и проверяет результат на оборудовании. Работает с IPv4 **Filter, NAT, Mangle, Raw**.
 
 ## Возможности
 
@@ -66,7 +66,7 @@ APP_STOP_GUEST | Гостевая сеть
 
 ## Что важно понимать
 
-MST включает подготовленные правила, а не определяет, какой трафик нужно блокировать. Реальный эффект зависит от action, chain, порядка правил, FastTrack, NAT и conntrack. Надпись «Остановка включена» подтверждает состояние правил, а не измеренный обрыв трафика.
+MFC включает подготовленные правила, а не определяет, какой трафик нужно блокировать. Реальный эффект зависит от action, chain, порядка правил, FastTrack, NAT и conntrack. Надпись «Остановка включена» подтверждает состояние правил, а не измеренный обрыв трафика.
 
 Группа изменяется последовательно: транзакции и автоматического отката нет. При потере связи часть правил может уже измениться. Динамические правила не переключаются; invalid-правила нельзя включать. Подробности: [модель безопасности](SECURITY.md).
 
@@ -74,9 +74,9 @@ MST включает подготовленные правила, а не опр
 
 ## Статус и сборка
 
-Версия **0.2.10 — предварительная**. База: Kotlin, Android SDK 35 (target 34, min 26), JDK 17+, Gradle 8.9, AGP 8.7.3. В публичном релизе опубликован существующий debug APK; это обозначено в имени файла. CI-артефакты имеют временную debug-подпись и не предназначены для обновления установленного релизного APK. Ключ подписи в репозиторий не включён.
+Версия **0.2.11 — предварительная**. База: Kotlin, Android SDK 35 (target 34, min 26), JDK 17+, Gradle 8.9, AGP 8.7.3. В публичном релизе опубликован существующий debug APK; это обозначено в имени файла. CI-артефакты имеют временную debug-подпись и не предназначены для обновления установленного релизного APK. Ключ подписи в репозиторий не включён.
 
-Последняя локальная проверка исходников: **86 JUnit без ошибок**, lint без ошибок. Ранее работа REST/HTTP и переключение тестовых групп подтверждались на смартфоне и роутере. Новые API/API-SSL, Android-маршруты и ограничения ролей версии 0.2.10 требуют аппаратной приёмки: [чек-лист](docs/TESTING.md). Это не заявление о полной аппаратной совместимости.
+Последняя локальная проверка исходников: **86 JUnit без ошибок**, lint без ошибок. Ранее работа REST/HTTP и переключение тестовых групп подтверждались на смартфоне и роутере. Новые API/API-SSL, Android-маршруты и ограничения ролей версии 0.2.11 требуют аппаратной приёмки: [чек-лист](docs/TESTING.md). Это не заявление о полной аппаратной совместимости.
 
 ```powershell
 .\build-apk.ps1 -SdkPath 'C:\Android\Sdk' -JdkPath 'C:\Java\jdk-21'

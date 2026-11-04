@@ -6,7 +6,7 @@ body:
     id: environment
     attributes:
       label: Окружение
-      description: Версии MST, Android, RouterOS; модель телефона; REST/API; Wi-Fi/VPN/Ethernet. Без адресов и паролей.
+      description: Версии MFC, Android, RouterOS; модель телефона; REST/API; Wi-Fi/VPN/Ethernet. Без адресов и паролей.
     validations:
       required: true
   - type: textarea

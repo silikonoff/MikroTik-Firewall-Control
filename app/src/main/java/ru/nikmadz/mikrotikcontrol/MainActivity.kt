@@ -502,7 +502,7 @@ class MainActivity : Activity() {
         } // A launcher restriction must never prevent startup or firewall control.
     }
 
-    private fun showError(text: String, title: String = "MST") {
+    private fun showError(text: String, title: String = "MFC") {
         if (resumed && !isFinishing && !isDestroyed) AlertDialog.Builder(this)
             .setTitle(title).setMessage(text)
             .setPositiveButton("ОК", null).show()

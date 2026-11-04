@@ -41,9 +41,9 @@ if (!(Test-Path (Join-Path $env:USERPROFILE '.android\debug.keystore'))) {
 if ($LASTEXITCODE -ne 0) { throw 'Tests, lint or APK build failed. See the Gradle output.' }
 foreach ($directory in @('release', 'dist')) {
     New-Item -ItemType Directory -Force -Path $directory | Out-Null
-    $apk = Join-Path $directory 'MikroTikFirewallControl-v0.2.10-debug.apk'
+    $apk = Join-Path $directory 'MikroTikFirewallControl-v0.2.11-debug.apk'
     Copy-Item 'app\build\outputs\apk\debug\app-debug.apk' $apk -Force
     $hash = (Get-FileHash -LiteralPath $apk -Algorithm SHA256).Hash.ToLowerInvariant()
-    "$hash  MikroTikFirewallControl-v0.2.10-debug.apk" | Set-Content "$apk.sha256" -Encoding ascii
+    "$hash  MikroTikFirewallControl-v0.2.11-debug.apk" | Set-Content "$apk.sha256" -Encoding ascii
     Write-Host "APK: $PSScriptRoot\$apk SHA256: $hash"
 }
