@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="profile_name" type="id" />
+    <item name="profile_host" type="id" />
+    <item name="profile_port" type="id" />
+    <item name="profile_username" type="id" />
+    <item name="profile_password" type="id" />
+    <item name="profile_route" type="id" />
+    <item name="profile_protocol" type="id" />
+    <item name="profile_access" type="id" />
+    <item name="profile_api_protocol" type="id" />
+    <item name="profile_api_port" type="id" />
+</resources>

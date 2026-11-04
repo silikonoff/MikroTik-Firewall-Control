@@ -1,0 +1,26 @@
+.gradle/
+.idea/
+*.iml
+local.properties
+build/
+**/build/
+*.apk
+*.jks
+.DS_Store
+.gradle-distributions/
+dist/
+*.keystore
+*.p12
+*.pfx
+
+.build-tools/
+.gradle-user-home/
+release/
+
+# Local credentials and publication scratch
+*.pem
+*.key
+.env
+.env.*
+!.env.example
+*.log

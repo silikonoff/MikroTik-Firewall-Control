@@ -1,0 +1,23 @@
+name: Ошибка
+description: Сообщить о проблеме без секретных данных
+labels: [bug]
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Окружение
+      description: Версии MST, Android, RouterOS; модель телефона; REST/API; Wi-Fi/VPN/Ethernet. Без адресов и паролей.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Шаги и результат
+      description: Как воспроизвести, что ожидалось, что произошло. Состояние правил проверьте отдельно на роутере.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Ошибка или снимок
+      description: Удалите имена объектов, логины, IP, пароли и прочие личные данные.

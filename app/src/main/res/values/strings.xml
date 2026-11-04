@@ -1,0 +1,4 @@
+<resources>
+    <string name="last_checked">Проверено в %1$s · обновление каждые 15 с</string>
+    <string name="switching_group">● Переключение %1$s…</string>
+</resources>

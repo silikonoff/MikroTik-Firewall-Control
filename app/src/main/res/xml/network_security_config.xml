@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- HTTP is explicit per profile and restricted to direct LAN in ProfileValidation.
+         Arbitrary user-supplied router addresses require base cleartext permission.
+         HTTPS still uses normal CA and hostname validation; there is no fallback. -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
